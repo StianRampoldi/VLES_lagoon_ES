@@ -1,0 +1,181 @@
+# Lagoon-ES-Model
+![RStudio](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white)
+# LES - Lagoon's Ecosystem Services
+A socio-ecological modelling tool for the ecosystem services (ES) of the Venice Lagoon
+
+- [What](#what)
+- [Why](#why)
+- [Getting started](#getting-started) 
+
+
+## What
+
+Here is presented a modelling tool written in R that uses a system of differential equations solved with the ode solver [deSolve](https://cran.r-project.org/web/packages/deSolve/index.html).
+
+The model represents a simplified version of the Socio-ecological system framework that describes the interactions of fauna,
+habitats, Actors and governance of the Venice Lagoon from which the Ecosystem Services emerge.
+
+The differential equations of the state variables of the system are defined using a systemic gain-loss approach.
+The equations for the ecosystem services on the other are more varied depending on the type of service.
+
+The code requires different additional data to run imported from separate CSV files:
+* initial conditions
+* parameters
+* time-series
+* forcings
+* reference values
+
+The output is printed as an XLSX file. The model can be used to compute different future scenarios,
+for example by changing the climate scenario-based forcings.
+
+### Packages used
+1. [deSolve](https://cran.r-project.org/web/packages/deSolve/index.html)
+2. [ODEsensitivity](https://cran.r-project.org/web/packages/ODEsensitivity/index.html)
+
+
+## Why
+This model is part of a university project developed between the _University Ca' Foscari of Venice_ and the _University IUAV of
+Venice_ to assess the ecological sustainability of the ecosystem services of the Venice Lagoon.
+
+The code, in particular, was developed by the contribution of _Daniele Brigolin_<sup>1</sup>, _Stian Rampoldi_<sup>1</sup>, and _Silvia Rova_<sup>2</sup>, as part of their research work.
+
+The goal is to propose a possible example of a modelling tool for the dynamic quantification of multiple ecosystem services that can be 
+replicated and adapted for other anthropized coastal lagoon systems, and test it for the case study of the Venice Lagoon.
+
+1=_University IUAV of Venice_,
+2=_University of Ca' Foscari of Venice_
+
+## Getting Started
+1. Clone the repository
+2. Run the code and you will obtain the outputs of the model:
+   * the numerical solution of the ODE solver: yearly values for all variables
+   * the result matrix of the sensitivity test: yearly avereges of mu* and sigma
+
+<!-- 
+See if it's possible to have the relative path of the csv files in the R code,
+that way people can directly clone the repository and run the code,
+withouth the need to change anything.
+-->
+
+<!--
+*Original text*:
+To run the code, download the R file and the five CSV files and put them in a chosen folder.
+Open the R file and modify the path of files to the one you are currently using.
+Now you can run the code and obtain the outputs of the model: the solution of the ODE solver and the of the sensitivity test. 
+-->
+
+## Architecture
+
+The code is divided into four main sections: 
+1. Preparation for the ODEsolver:
+  in this section, the data are uploaded from the CSV files
+  (`initialConditions.csv`, `forcings.csv`, `parameters.csv`, `reference.csv`, `timeSeries.csv`)
+2. run of the ODEsolver:
+  the results are saved as a data frame that can be printed on an xlsx file or plotted
+3. preparation for the Morris test:
+  in this section, the uncertainty interval is fixed for each parameter 
+4. run of the Morris test:
+   (⚠️ Be careful! This part takes long to run since it runs circa 37million times the model.)
+
+<!-- Could be nice to have a picture of a plotted example -->
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="YOUR-DARKMODE-IMAGE">
+ <source media="(prefers-color-scheme: light)" srcset="YOUR-LIGHTMODE-IMAGE">
+ <img alt="Plotted picture example" src="plotted-example-image">
+</picture>
+
+### ECOSYSTEM SERVICES
+
+The model includes twelve ecosystem services (ES), four for each category.
+
+These emerge from the internal interactions and are:
+<!--
+ES => Ecosystem Service ?
+In this case it's more comprehensible if '(ES)' is added in the phrase above, so it's easier to understand
+-->
+* **Regulating ES**:
+  - lifecycle maintenance (LCM) by the habitats’ nursery function
+  - water purification of the seawater from nitrogen loads by vegetated habitats
+  - climate regulation by ecosystemic processes of carbon sequestration
+  - prevention of erosion of the lagoon’s habitats
+* **Provisioning ES**:
+  - clam harvesting
+  - artisanal fishing
+  - recreational fishing
+  - bird hunting
+* **Cultural ES**:
+  - traditional rowing (Voga in Italian)
+  - cognitive development through environmental education activities
+  - tourism in the lagoon
+  - recreational navigation
+
+### VARIABLES
+
+The model has a set of 11 state variables of which five are morphologic and six are fauna stocks. 
+These variables have a differential equation that describes the dynamic behaviour of the variable in time.
+
+* **The morphologic stocks are**:
+  - `SM` salt marshes
+  - `SG` sea grasses
+  - `BD` benthic diatomes
+  - `BB` bare-bottom
+  - `NC` navigable canals
+    
+* **The fauna stocks are**:
+  - `TA` clams
+  - `BI` birds
+  - `SB` sea-bream
+  - `LA` sea-bass
+  - `DE` demersal
+  - `MU` mugilidae
+ 
+* There are other elements of the morphology which are obtained from the state variables:
+  - shallow-intertidal `SI=SM+SG+BD+BB`
+  - deep-subtidal `DS=409-SI`
+  - non-navigable canals `NNC=49-NC`
+  - creeks `CR=sm_geom*SM`
+
+### FORCINGS
+
+There are four demographic forcings:
+* residents of the lagoon
+* residents in the surrounding mainland
+* higher-education students
+* Venice tourists
+
+These groups are translated into eight stocks of Actors involved in the ecosystem services:
+* clam fishers
+* artisanal fishers
+* recreational fishers
+* bird hunters
+* boaters
+* voga rowers
+* environmental education students
+* tourists
+
+There are two climatic forcings:
+* sea-level rise
+* seawater warming.
+
+These can be set in two different climate change scenarios namely:
+* medium (`rcp2.6` and `rcp4.5`)
+* extreme (`rcp8.5`)
+
+### MANAGEMENT
+
+The management is included in the model in different ways:
+* restoration rates of the habitats
+* regulation of provisioning services
+* regulation of the activation of the MOSE (movable water barrier system)
+* regulation of canals excavation
+
+### TIMEFRAME
+
+The model runs on yearly timesteps and runs three temporal phases:
+1. `1980-1999` It starts in 1980 and has a 20-year timeframe used for spin-up to reach the initial stability of the system in 1999.
+2. `2000-2019` Validation period use to compare the model dynamics to the historical data, and runs for 20 Years from 2000 to 2019.
+3. `2020-2080`Future projections used to explore possible future trends based on the management and the forcings implemented and runs from 2020 to 2080.
+
+## Future Development
+We invite everyone to contribute to the development of this code and to adapt it to different coastal lagoon systems for ES assessments.
+

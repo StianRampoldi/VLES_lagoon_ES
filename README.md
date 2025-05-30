@@ -35,7 +35,7 @@ for example by changing the climate scenario-based forcings.
 2. [ODEsensitivity](https://cran.r-project.org/web/packages/ODEsensitivity/index.html)
 
 
-## Why
+## Why and Who
 This model is part of a university project developed between the _University Ca' Foscari of Venice_ and the _University IUAV of
 Venice_ to assess the ecological sustainability of the ecosystem services of the Venice Lagoon.
 

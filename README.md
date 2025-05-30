@@ -12,7 +12,7 @@ A socio-ecological modelling tool for the ecosystem services (ES) of the Venice 
 
 ## What
 
-Here is presented a modelling tool written in R that uses a system of differential equations solved with the ode solver [deSolve](https://cran.r-project.org/web/packages/deSolve/index.html).
+Here we present VLES, a modelling tool written in R that uses a system of differential equations solved with the ode solver [deSolve](https://cran.r-project.org/web/packages/deSolve/index.html).
 
 The model represents a simplified version of the Socio-ecological system framework that describes the interactions of fauna,
 habitats, Actors and governance of the Venice Lagoon from which the Ecosystem Services emerge.

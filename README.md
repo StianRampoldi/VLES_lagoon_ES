@@ -3,10 +3,10 @@
 
 ![RStudio](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white)
 # VLES - Lagoon's Ecosystem Services
-A socio-ecological modelling tool for the ecosystem services (ES) of the Venice Lagoon
+A socio-ecological modelling tool for the ecosystem services (ES) of the [Venice Lagoon](https://en.wikipedia.org/wiki/Venetian_Lagoon).
 
 - [What](#what)
-- [Why](#why)
+- [Why and Who](#why-and-who)
 - [Getting started](#getting-started) 
 
 
@@ -59,24 +59,17 @@ that way people can directly clone the repository and run the code,
 withouth the need to change anything.
 -->
 
-<!--
-*Original text*:
-To run the code, download the R file and the five CSV files and put them in a chosen folder.
-Open the R file and modify the path of files to the one you are currently using.
-Now you can run the code and obtain the outputs of the model: the solution of the ODE solver and the of the sensitivity test. 
--->
-
 ## Architecture
 
 The code is divided into four main sections: 
 1. Preparation for the ODEsolver:
   in this section, the data are uploaded from the CSV files
   (`initialConditions.csv`, `forcings.csv`, `parameters.csv`, `reference.csv`, `timeSeries.csv`)
-2. run of the ODEsolver:
-  the results are saved as a data frame that can be printed on an xlsx file or plotted
-3. preparation for the Morris test:
+2. Run the ODEsolver:
+  the results are saved as a data frame and printed on an xlsx file (they can alternative be plotted by uncommenting the section).
+3. Preparation for the Morris test:
   in this section, the uncertainty interval is fixed for each parameter 
-4. run of the Morris test:
+4. Run the Morris test:
    (⚠️ Be careful! This part takes long to run since it runs circa 37million times the model.)
 
 <!-- Could be nice to have a picture of a plotted example -->
@@ -90,13 +83,9 @@ The code is divided into four main sections:
 
 ### ECOSYSTEM SERVICES
 
-The model includes twelve ecosystem services (ES), four for each category.
+The model focuses on twelve ecosystem services (ES) among those present in the Venice Lagoon, four for each category.
 
-These emerge from the internal interactions and are:
-<!--
-ES => Ecosystem Service ?
-In this case it's more comprehensible if '(ES)' is added in the phrase above, so it's easier to understand
--->
+These emerge from the interactions of the system components, that are:
 * **Regulating ES**:
   - lifecycle maintenance (LCM) by the habitats’ nursery function
   - water purification of the seawater from nitrogen loads by vegetated habitats
@@ -114,19 +103,10 @@ In this case it's more comprehensible if '(ES)' is added in the phrase above, so
   - recreational navigation
 ![ESmag2025](https://github.com/user-attachments/assets/2421d1bd-e964-4f03-a43f-d59791edb90c)
 
-### VARIABLES
+### STATE VARIABLES
 
 The model has a set of 11 state variables of which five are morphologic and six are fauna stocks. 
 These variables have a differential equation that describes the dynamic behaviour of the variable in time.
-
-* **The morphologic stocks are**:
-  - `SM` salt marshes
-  - `SG` sea grasses
-  - `BD` benthic diatomes
-  - `BB` bare-bottom
-  - `NC` navigable canals
-    
-  ![MORFOmag2025](https://github.com/user-attachments/assets/ccdc6711-1115-42b0-8887-e654601dc3d6)
 
 * **The fauna stocks are**:
   - `TA` clams
@@ -137,6 +117,15 @@ These variables have a differential equation that describes the dynamic behaviou
   - `MU` mugilidae
   
  ![faunamarz](https://github.com/user-attachments/assets/67750a34-09e0-4cc6-8e10-d093331a07c3)
+ 
+* **The morphologic stocks are**:
+  - `SM` salt marshes
+  - `SG` sea grasses
+  - `BD` benthic diatomes
+  - `BB` bare-bottom
+  - `NC` navigable canals
+    
+  ![MORFOmag2025](https://github.com/user-attachments/assets/ccdc6711-1115-42b0-8887-e654601dc3d6)
 
 * There are other elements of the morphology which are obtained from the state variables:
   - shallow-intertidal `SI=SM+SG+BD+BB`
@@ -179,7 +168,7 @@ These can be set in two different climate change scenarios namely:
 The management is included in the model in different ways:
 * restoration rates of the habitats
 * regulation of provisioning services
-* regulation of the activation of the MOSE (movable water barrier system)
+* regulation of the activation of the [MOSE](https://en.wikipedia.org/wiki/MOSE) (movable water barrier system)
 * regulation of canals excavation
 In the model are included for example the impact of the segrasses meadows done within the project [Seresto](https://www.isprambiente.gov.it/it/progetti/cartella-progetti-in-corso/acque-interne-e-marino-costiere-1/progetti-conclusi/life-seresto).
 

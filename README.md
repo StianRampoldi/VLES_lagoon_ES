@@ -2,7 +2,7 @@
 ![VLES-salicornia](https://github.com/user-attachments/assets/04a0d529-3a88-49ab-ad03-f3266b77dabf)
 
 ![RStudio](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white)
-# VLES - Lagoon's Ecosystem Services
+# VLES - Venice Lagoon's Ecosystem Services
 A socio-ecological modelling tool for the ecosystem services (ES) of the [Venice Lagoon](https://en.wikipedia.org/wiki/Venetian_Lagoon).
 
 - [What](#what)

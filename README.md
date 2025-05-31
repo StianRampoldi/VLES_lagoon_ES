@@ -178,6 +178,7 @@ The model runs on yearly timesteps and runs three temporal phases:
 1. `1980-1999` It starts in 1980 and has a 20-year timeframe used for spin-up to reach the initial stability of the system in 1999.
 2. `2000-2019` Validation period use to compare the model dynamics to the historical data, and runs for 20 Years from 2000 to 2019.
 3. `2020-2080`Future projections used to explore possible future trends based on the management and the forcings implemented and runs from 2020 to 2080.
+   
 ![SR carpeneda](https://github.com/user-attachments/assets/17d54371-1986-416d-ad95-898e122ebda2)
 
 ## Future Development

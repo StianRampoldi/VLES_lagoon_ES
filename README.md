@@ -1,7 +1,10 @@
 # Lagoon-ES-Model
-![VLES-salicornia](https://github.com/user-attachments/assets/04a0d529-3a88-49ab-ad03-f3266b77dabf)
+<!-- ![VLES-salicornia](https://github.com/user-attachments/assets/04a0d529-3a88-49ab-ad03-f3266b77dabf)-->
+
+<img src="https://github.com/user-attachments/assets/04a0d529-3a88-49ab-ad03-f3266b77dabf" alt="VLES-salicornia" width=70% />
 
 ![RStudio](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white)
+
 # VLES - Venice Lagoon's Ecosystem Services
 A socio-ecological modelling tool for the ecosystem services (ES) of the [Venice Lagoon](https://en.wikipedia.org/wiki/Venetian_Lagoon).
 
@@ -79,7 +82,7 @@ The code is divided into four main sections:
  <img alt="Plotted picture example" src="plotted-example-image">
 </picture>
 
-![bigboxesmaggio](https://github.com/user-attachments/assets/f279560a-412a-4c72-ae1e-a89c67d06cf4)
+<img src="https://github.com/user-attachments/assets/f279560a-412a-4c72-ae1e-a89c67d06cf4" alt="model-overview" width=90%]>
 
 ### ECOSYSTEM SERVICES
 
@@ -101,7 +104,7 @@ These emerge from the interactions of the system components, that are:
   - cognitive development through environmental education activities
   - tourism in the lagoon
   - recreational navigation
-![ESmag2025](https://github.com/user-attachments/assets/2421d1bd-e964-4f03-a43f-d59791edb90c)
+<img src="https://github.com/user-attachments/assets/2421d1bd-e964-4f03-a43f-d59791edb90c" alt="ES-overview" width=80%]>
 
 ### STATE VARIABLES
 
@@ -116,7 +119,7 @@ These variables have a differential equation that describes the dynamic behaviou
   - `DE` demersal
   - `MU` mugilidae
   
- ![faunamarz](https://github.com/user-attachments/assets/67750a34-09e0-4cc6-8e10-d093331a07c3)
+<img src="https://github.com/user-attachments/assets/67750a34-09e0-4cc6-8e10-d093331a07c3" alt="FAUNA-overview" width=50%]>
  
 * **The morphologic stocks are**:
   - `SM` salt marshes
@@ -125,7 +128,7 @@ These variables have a differential equation that describes the dynamic behaviou
   - `BB` bare-bottom
   - `NC` navigable canals
     
-  ![MORFOmag2025](https://github.com/user-attachments/assets/ccdc6711-1115-42b0-8887-e654601dc3d6)
+ <img src="https://github.com/user-attachments/assets/ccdc6711-1115-42b0-8887-e654601dc3d6" alt="MORPHOLOGY-overview" width=60%]>
 
 * There are other elements of the morphology which are obtained from the state variables:
   - shallow-intertidal `SI=SM+SG+BD+BB`
@@ -133,7 +136,7 @@ These variables have a differential equation that describes the dynamic behaviou
   - non-navigable canals `NNC=49-NC`
   - creeks `CR=sm_geom*SM`
     
-![constraintsMag25](https://github.com/user-attachments/assets/36d8b122-ca5c-4b0f-8953-dfe9efbffc46)
+ <img src="https://github.com/user-attachments/assets/36d8b122-ca5c-4b0f-8953-dfe9efbffc46" alt="CONSTRAINTS-overview" width=50%]>
 
 ### FORCINGS
 
@@ -161,7 +164,7 @@ These can be set in two different climate change scenarios namely:
 * medium (`rcp2.6` and `rcp4.5`)
 * extreme (`rcp8.5`)
 
-![forcingsmar](https://github.com/user-attachments/assets/3f1fe75c-ac96-47ba-8bbf-e20f6d3e24f8)
+<img src="https://github.com/user-attachments/assets/3f1fe75c-ac96-47ba-8bbf-e20f6d3e24f8" alt="FORCINGS-overview" width=60%]>
 
 ### MANAGEMENT
 
@@ -179,7 +182,7 @@ The model runs on yearly timesteps and runs three temporal phases:
 2. `2000-2019` Validation period use to compare the model dynamics to the historical data, and runs for 20 Years from 2000 to 2019.
 3. `2020-2080`Future projections used to explore possible future trends based on the management and the forcings implemented and runs from 2020 to 2080.
    
-![SR carpeneda](https://github.com/user-attachments/assets/17d54371-1986-416d-ad95-898e122ebda2)
+<img src="https://github.com/user-attachments/assets/17d54371-1986-416d-ad95-898e122ebda2" alt="PHASES-overview" width=60%]>
 
 ## Future Development
 We invite everyone to contribute to the development of this code and to adapt it to different coastal lagoon systems for ES assessments.

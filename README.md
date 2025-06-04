@@ -70,19 +70,18 @@ The code is divided into four main sections:
   (`initialConditions.csv`, `forcings.csv`, `parameters.csv`, `reference.csv`, `timeSeries.csv`)
 2. Run the ODEsolver:
   the results are saved as a data frame and printed on an xlsx file (they can alternative be plotted by uncommenting the section).
-3. Preparation for the Morris test:
+<img src="https://github.com/user-attachments/assets/d53d273e-ffae-492a-8a76-a4132104c63d" alt="OUTPUT-ode-SI" width=30%]>
+
+4. Preparation for the Morris test:
   in this section, the uncertainty interval is fixed for each parameter 
-4. Run the Morris test:
+5. Run the Morris test:
    (⚠️ Be careful! This part takes long to run since it runs circa 37million times the model.)
+   
+<img src="https://github.com/user-attachments/assets/79714e88-f1a5-4c97-8616-2d7719d5f9f3" alt="OUTPUT-morris-SG" width=30%]>
 
-<!-- Could be nice to have a picture of a plotted example -->
-<picture>
- <source media="(prefers-color-scheme: dark)" srcset="YOUR-DARKMODE-IMAGE">
- <source media="(prefers-color-scheme: light)" srcset="YOUR-LIGHTMODE-IMAGE">
- <img alt="Plotted picture example" src="plotted-example-image">
-</picture>
+Here we present a graphical overview of the model in the form of a stock-and-flow diagram.
 
-<img src="https://github.com/user-attachments/assets/f279560a-412a-4c72-ae1e-a89c67d06cf4" alt="model-overview" width=90%]>
+<img src="https://github.com/user-attachments/assets/f279560a-412a-4c72-ae1e-a89c67d06cf4" alt="model-overview" width=95%]>
 
 ### ECOSYSTEM SERVICES
 

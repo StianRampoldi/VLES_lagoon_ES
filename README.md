@@ -183,5 +183,5 @@ The model runs on yearly timesteps and runs three temporal phases:
 <img src="https://github.com/user-attachments/assets/17d54371-1986-416d-ad95-898e122ebda2" alt="PHASES-overview" width=60%]>
 
 ## Future Development
-We invite everyone to contribute to the development of this code and to adapt it to different coastal lagoon systems for ES assessments.
+We invite everyone to contribute to the development of this code and to adapt it to different coastal lagoon systems for ES assessments and promotion of coastal lagoons' environmental protection.
 

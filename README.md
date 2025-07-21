@@ -23,7 +23,7 @@ habitats, Actors and governance of the Venice Lagoon from which the Ecosystem Se
 The differential equations of the state variables of the system are defined using a systemic gain-loss approach.
 The equations for the ecosystem services on the other are more varied depending on the type of service.
 
-The code requires different additional data to run imported from separate CSV files:
+The code requires different additional data to run imported from separate CSV files, that are stored in the folder "data":
 * initial conditions
 * parameters
 * time-series
@@ -55,30 +55,27 @@ replicated and adapted for other anthropized coastal lagoon systems, and test it
 
 ## Getting Started
 1. Clone the repository
-2. Run the code and you will obtain the outputs of the model:
+2. Run the code "VLES_model" and you will obtain the outputs of the model:
    * the numerical solution of the ODE solver: yearly values for all variables
-   * the result matrix of the sensitivity test: yearly avereges of mu* and sigma
-
-<!-- 
-See if it's possible to have the relative path of the csv files in the R code,
-that way people can directly clone the repository and run the code,
-withouth the need to change anything.
--->
+3. Run the code "VLES_sensitivity"and you will obtain the outputs of the sensitivity test:
+   * the result matrix of the Morris sensitivity test: yearly avereges of `mu*` and `sigma`
 
 ## Architecture
 
-The code is divided into four main sections: 
-1. Preparation for the ODEsolver:
+The code is divided into two files`VLES_model` and `VLES_sensitivity`, each has two sections.
+1. VLES_model:
+  * Preparation for the ODEsolver:
   in this section, the data are uploaded from the CSV files contained in the folder "data"
   (`initialConditions.csv`, `forcings.csv`, `parameters.csv`, `references.csv`, `timeseries.csv`)
-2. Run the ODEsolver:
+  * Run the ODEsolver:
   the results are saved as a data frame and printed on the VLESout.xlsx file (they can alternative be plotted by uncommenting the plot section).
-<img src="https://github.com/user-attachments/assets/d53d273e-ffae-492a-8a76-a4132104c63d" alt="OUTPUT-ode-SI" width=30%]>
+ <img src="https://github.com/user-attachments/assets/d53d273e-ffae-492a-8a76-a4132104c63d" alt="OUTPUT-ode-SI" width=30%]>
 
-4. Preparation for the Morris test:
+2. VLES_sensitivity:
+  * Preparation for the Morris test:
   in this section, the uncertainty interval is fixed for each parameter 
-5. Run the Morris test:
-   (⚠️ Be careful! This part takes long to run since it runs circa 37million times the model.)
+  * Run the Morris test:
+   (⚠️ Be careful! This part takes long to run since it runs millions of times the model.)
    
 <img src="https://github.com/user-attachments/assets/79714e88-f1a5-4c97-8616-2d7719d5f9f3" alt="OUTPUT-morris-SG" width=30%]>
 
@@ -167,7 +164,7 @@ These can be set in two different climate change scenarios namely:
 
 <img src="https://github.com/user-attachments/assets/3f1fe75c-ac96-47ba-8bbf-e20f6d3e24f8" alt="FORCINGS-overview" width=60%]>
 
-### MANAGEMENT
+### GOVERNANCE MANAGEMENT
 
 The management is included in the model in different ways:
 * restoration rates of the habitats

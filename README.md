@@ -83,8 +83,7 @@ The code is divided into four main sections:
 <img src="https://github.com/user-attachments/assets/79714e88-f1a5-4c97-8616-2d7719d5f9f3" alt="OUTPUT-morris-SG" width=30%]>
 
 Here we present a graphical overview of the model in the form of a stock-and-flow diagram.
-
-<img src="https://github.com/user-attachments/assets/f279560a-412a-4c72-ae1e-a89c67d06cf4" alt="model-overview" width=95%]>
+<img src="https://github.com/user-attachments/assets/26c65d4e-b58a-490f-b0e4-ac129135043d" alt="model-overview" width=95%]>
 
 ### ECOSYSTEM SERVICES
 
@@ -106,7 +105,7 @@ These emerge from the interactions of the system components, that are:
   - cognitive development through environmental education activities
   - tourism in the lagoon
   - recreational navigation
-<img src="https://github.com/user-attachments/assets/2421d1bd-e964-4f03-a43f-d59791edb90c" alt="ES-overview" width=80%]>
+<img src="https://github.com/user-attachments/assets/a5671e26-98b5-4209-b465-38d354f09fa3" alt="ES-overview" width=80%]>
 
 ### STATE VARIABLES
 
@@ -121,16 +120,16 @@ These variables have a differential equation that describes the dynamic behaviou
   - `DE` demersal
   - `MU` mugilidae
   
-<img src="https://github.com/user-attachments/assets/67750a34-09e0-4cc6-8e10-d093331a07c3" alt="FAUNA-overview" width=50%]>
- 
+ <img src="https://github.com/user-attachments/assets/6b3c3221-528d-4cb9-9e54-b03d7f116aa1" alt="FAUNA-overview" width=50%]>
+
 * **The morphologic stocks are**:
   - `SM` salt marshes
   - `SG` sea grasses
   - `BD` benthic diatomes
   - `BB` bare-bottom
   - `NC` navigable canals
-    
- <img src="https://github.com/user-attachments/assets/ccdc6711-1115-42b0-8887-e654601dc3d6" alt="MORPHOLOGY-overview" width=60%]>
+  
+<img src="https://github.com/user-attachments/assets/6a0d2d1a-8520-486e-9222-8e280572e068" alt="MORPHOLOGY-overview" width=60%]>
 
 * There are other elements of the morphology which are obtained from the state variables:
   - shallow-intertidal `SI=SM+SG+BD+BB`

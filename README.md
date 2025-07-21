@@ -32,7 +32,10 @@ The code requires different additional data to run imported from separate CSV fi
 
 The output is printed as an XLSX file. The model can be used to compute different future scenarios,
 for example by changing the climate scenario-based forcings.
-
+### License
+ The model is licensed under the Academic Free License version 3.0.
+ The authors for the attribution are: Brigolin, D., Rampoldi, S., & Rova, S..
+ 
 ### Packages used
 1. [deSolve](https://cran.r-project.org/web/packages/deSolve/index.html)
 2. [ODEsensitivity](https://cran.r-project.org/web/packages/ODEsensitivity/index.html)
@@ -66,10 +69,10 @@ withouth the need to change anything.
 
 The code is divided into four main sections: 
 1. Preparation for the ODEsolver:
-  in this section, the data are uploaded from the CSV files
-  (`initialConditions.csv`, `forcings.csv`, `parameters.csv`, `reference.csv`, `timeSeries.csv`)
+  in this section, the data are uploaded from the CSV files contained in the folder "data"
+  (`initialConditions.csv`, `forcings.csv`, `parameters.csv`, `references.csv`, `timeseries.csv`)
 2. Run the ODEsolver:
-  the results are saved as a data frame and printed on an xlsx file (they can alternative be plotted by uncommenting the section).
+  the results are saved as a data frame and printed on the VLESout.xlsx file (they can alternative be plotted by uncommenting the plot section).
 <img src="https://github.com/user-attachments/assets/d53d273e-ffae-492a-8a76-a4132104c63d" alt="OUTPUT-ode-SI" width=30%]>
 
 4. Preparation for the Morris test:

@@ -172,10 +172,11 @@ These can be set in two different climate change scenarios namely:
 
 The management is included in the model in different ways:
 * restoration rates of the habitats
-* regulation of provisioning services
+* regulation of provisioning services (limit on fishing and hunting catch per person)
 * regulation of the activation of the [MOSE](https://en.wikipedia.org/wiki/MOSE) (movable water barrier system)
 * regulation of canals excavation
 In the model are included for example the impact of the segrasses meadows done within the project [Seresto](https://www.isprambiente.gov.it/it/progetti/cartella-progetti-in-corso/acque-interne-e-marino-costiere-1/progetti-conclusi/life-seresto).
+* regulation of actors (number of licences for boaters and fishers)
 
 ### TIMEFRAME
 

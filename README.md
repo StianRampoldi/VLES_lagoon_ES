@@ -102,7 +102,7 @@ These emerge from the interactions of the system components, that are:
   - cognitive development through environmental education activities
   - tourism in the lagoon
   - recreational navigation
-<img src="https://github.com/user-attachments/assets/a5671e26-98b5-4209-b465-38d354f09fa3" alt="ES-overview" width=80%]>
+<img src="https://github.com/user-attachments/assets/a5671e26-98b5-4209-b465-38d354f09fa3" alt="ES-overview" width=70%]>
 
 ### STATE VARIABLES
 
@@ -138,7 +138,7 @@ These variables have a differential equation that describes the dynamic behaviou
 
 ### FORCINGS
 
-There are four demographic forcings:
+1. There are four demographic forcings:
 * residents of the lagoon
 * residents in the surrounding mainland
 * higher-education students
@@ -154,7 +154,7 @@ These groups are translated into eight stocks of Actors involved in the ecosyste
 * environmental education students
 * tourists
 
-There are two climatic forcings:
+2. There are two climatic forcings:
 * sea-level rise
 * seawater warming.
 
@@ -162,7 +162,9 @@ These can be set in two different climate change scenarios namely:
 * medium (`rcp2.6` and `rcp4.5`)
 * extreme (`rcp8.5`)
 
-<img src="https://github.com/user-attachments/assets/3f1fe75c-ac96-47ba-8bbf-e20f6d3e24f8" alt="FORCINGS-overview" width=60%]>
+3. There is one extra environmental forcing which is the input of new fauna from outside the system. Birds are always free to access the lagoon, this simulates the open system that lagoon habitats represent for migratory species. The access of fish on the other hand is mediated by the closure of the MOSE system that regulates the inlets. There is no input of new clams, considering that this population concerns predominantly aquaculture and not wild populations.
+<img src="https://github.com/user-attachments/assets/9e55e87e-90b2-49eb-ae9e-8aa1135382d5" alt="FORCINGS-overview" width=60%]>
+
 
 ### GOVERNANCE MANAGEMENT
 

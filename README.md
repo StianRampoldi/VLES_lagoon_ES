@@ -185,7 +185,8 @@ The model runs on yearly timesteps and runs three temporal phases:
 2. `2000-2019` Validation period use to compare the model dynamics to the historical data, and runs for 20 Years from 2000 to 2019.
 3. `2020-2080`Future projections used to explore possible future trends based on the management and the forcings implemented and runs from 2020 to 2080.
    
-<img src="https://github.com/user-attachments/assets/17d54371-1986-416d-ad95-898e122ebda2" alt="PHASES-overview" width=60%]>
+<img src="https://github.com/user-attachments/assets/a2ffc502-f465-474f-8bc7-d14b62c04bde" alt="PHASES-overview" width=50%]>
+
 
 ## Future Development
 We invite everyone to contribute to the development of this code and to adapt it to different coastal lagoon systems, for developing ES assessments and promoting coastal lagoons' environmental protection.

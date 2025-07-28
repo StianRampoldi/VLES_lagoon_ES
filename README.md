@@ -35,7 +35,7 @@ The output is printed as an XLSX file. The model can be used to compute differen
 for example by changing the climate scenario-based forcings.
 ### License
  The model is licensed under the Academic Free License version 3.0.
- The authors for the attribution are: Brigolin, D., Rampoldi, S., & Rova, S..
+ The authors for the attribution are: Brigolin, D., Pranovi, F., Rampoldi, S., Rova, S., & Stocco, A..
  
 ### Packages used
 1. [deSolve](https://cran.r-project.org/web/packages/deSolve/index.html)
@@ -46,7 +46,7 @@ for example by changing the climate scenario-based forcings.
 This model is part of a university project developed between the _University Ca' Foscari of Venice_ and the _University IUAV of
 Venice_ to assess the ecological sustainability of the ecosystem services of the Venice Lagoon.
 
-The code, in particular, was developed by the contribution of _Daniele Brigolin_<sup>1</sup>, _Stian Rampoldi_<sup>1</sup>, and _Silvia Rova_<sup>2,3</sup>, as part of their research work.
+The code, in particular, was developed by the contribution of _Daniele Brigolin_<sup>1</sup>, _Fabio Pranovi_<sup>2</sup>,_Stian Rampoldi_<sup>1</sup>, and _Silvia Rova_<sup>2,3</sup>, & _Alice Stocco_<sup>2</sup>, as part of their research work.
 
 The goal is to propose a possible example of a modelling tool for the dynamic quantification of multiple ecosystem services that can be 
 replicated and adapted for other anthropized coastal lagoon systems, and test it for the case study of the Venice Lagoon.

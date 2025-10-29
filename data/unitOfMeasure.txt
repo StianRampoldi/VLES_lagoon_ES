@@ -1,0 +1,120 @@
+VLES_lagoon_ES - Unit of Measure of Data files:
+
+File "forcings.csv":
+ 
+kTrcp85 [°C]
+US0 [individuals]
+TV0 [individuals]
+re_MO_85_110 [adimensional]
+re_MO_85_130 [adimensional]
+
+
+
+File "initialConditions.csv":
+
+BD0 [km2]
+SM0 [km2]
+SG0 [km2]
+BB0 [km2]
+NC0 [km2]
+TA0 [ton FW/km2]
+BI0 [ton FW/km2]
+MU0 [ton FW/km2]
+SB0 [ton FW/km2]
+DE0 [ton FW/km2]
+LA0 [ton FW/km2]
+
+
+
+File "references.csv":
+
+HER0 [km2]
+SG_old [km2]
+SM_old [km2]
+SM_geom [adimensional]
+CD_0 [individuals]
+TR_0 [individuals]
+
+
+
+File "timeseries.csv":
+
+GR [individuals]
+ISbau [individuals]
+rcp85 [m]
+increase  [adimensional]
+FA_bau [adimensional]
+GS_SG [adimensional]
+
+
+
+File "parameters.csv":
+
+kER [1/y]
+kSA [1/y]
+d_TA [km2/ton]
+d_Nav [ind-1]
+d_Tou [ind-1]
+ni_BD [1/year]
+kH [1/°C]
+ni_SM [1/year]
+kR [adimensional]
+ni_SG [1/y]
+kF [1/°C]
+beta_LCM [adimensional]
+part_F [adimensional]
+rTA [1/y] 
+kTA [ton/km2]
+HTA [ton/(ind*y*km^2)]
+rBI [1/y]
+kBI [ton/km2]
+HBI [ton/(ind*y*km^2)]
+rMU [1/y]
+kMU [ton/km2]
+HMU [ton/(ind*y*km^2)]
+rSB [1/y]
+kSB [ton/km2]
+HSB [ton/(ind*y*km^2)]
+rLA [1/y]
+kLA [ton/km2]
+HLA [ton/(ind*y*km^2)]
+rDE [1/y]
+kDE [ton/km2]
+HDE [ton/(ind*y*km^2)]
+GS_CAN [1/year]
+GS_SM [1/year]
+GS_BD [1/year]
+kCSG [ton/(km2*y)]
+kCSM [ton/(km2*y)]
+wSMCD [adimensional]
+wSGCD [adimensional]
+wHER_TuNaCDTR [adimensional]
+wNAT_TuNaCDTR [adimensional]
+acc_TuNaCDTR [adimensional]
+wSMTR [adimensional]
+wSGTR [adimensional]
+kEP2 [adimensional]
+kNh [ton/(y*km2)]
+kNm [ton/(y*km2)]
+kNl [ton/(y*km2)]
+exA_ROW [1/year]
+exA_EDU [1/year]
+exA_TOU [1/year]
+exA_NAV [1/year]
+resSM [1/year]
+resSG [1/year]
+resBD [1/year]
+perTF [adimensional]
+perAF_V [adimensional]
+perAF_G [adimensional]
+perSF_V [adimensional]
+perSF_G [adimensional]
+perNAV_V [adimensional]
+perNAV_G [adimensional]
+perNAV_S [adimensional]
+perHUNT [adimensional]
+perEDU_R [adimensional]
+perEDU_S [adimensional]
+perROW_V [adimensional]
+perROW_G [adimensional]
+perROW_S [adimensional]

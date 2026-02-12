@@ -24,6 +24,8 @@ habitats, Actors and governance of the Venice Lagoon from which the Ecosystem Se
 The differential equations of the state variables of the system are defined using a systemic gain-loss approach.
 The equations for the ecosystem services on the other are more varied depending on the type of service.
 
+Further details on the model can be found in this [publication](https://doi.org/10.1016/j.ecolmodel.2026.111473) on the journal Ecological Modelling. 
+
 The code requires different additional data to run imported from separate CSV files, that are stored in the folder "data":
 * initial conditions
 * parameters
@@ -189,5 +191,7 @@ The model runs on yearly timesteps and runs three temporal phases:
 
 
 ## Future Development
-We invite everyone to contribute to the development of this code and to adapt it to different coastal lagoon systems, for developing ES assessments and promoting coastal lagoons' environmental protection.
+We invite everyone to contribute to the development of this code and to adapt it to different coastal lagoon systems, for developing ES assessments and promoting coastal lagoons' environmental protection. Helpful information on the methodology used to develope this code are presented in the following paper: 
+
+Rampoldi, S., Rova, S., Pranovi, F., Stocco, A., & Brigolin, D. (2026). A process-based model for multiple ecosystem services in the Venice lagoon under climate change and demographic forcings. Ecological Modelling. Volume 515, 11473, ISSN 0304-3800. https://doi.org/10.1016/j.ecolmodel.2026.111473
 
